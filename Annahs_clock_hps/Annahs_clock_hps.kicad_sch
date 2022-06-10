@@ -1245,6 +1245,22 @@
     )
   )
 
+  (symbol (lib_id "HPS:VCC") (at 124.46 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 2e84fd9d-f40c-4116-8b8f-5bdeef4ab66f)
+    (property "Reference" "#PWR?" (id 0) (at 124.46 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC" (id 1) (at 124.46 27.94 0))
+    (property "Footprint" "" (id 2) (at 124.46 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 124.46 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8a5b4bbf-ffc4-4110-86bc-a391e4c7f957))
+  )
+
   (symbol (lib_id "HPS:MountingHole") (at 25.4 179.07 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 3078fc62-fc65-44c3-8730-e98e32046f59)
@@ -1389,6 +1405,22 @@
     (pin "2" (uuid f14091d3-c91c-48fd-83b6-88410ab229e8))
   )
 
+  (symbol (lib_id "HPS:VCC") (at 137.16 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 743bfacd-802c-4d0b-bb24-4fad5a501214)
+    (property "Reference" "#PWR?" (id 0) (at 137.16 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC" (id 1) (at 137.16 27.94 0))
+    (property "Footprint" "" (id 2) (at 137.16 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 137.16 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 90c6e92a-aaa8-40be-b7a0-88de8e0d9813))
+  )
+
   (symbol (lib_id "HPS:GND") (at 149.86 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 7f76fa8c-ef00-48fc-a127-184b217b1c7c)
@@ -1419,6 +1451,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e9c3805c-f3a7-45d0-95f2-cc92a1337650))
+  )
+
+  (symbol (lib_id "HPS:VCC") (at 149.86 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 85527b9e-fc32-4d5e-9c6e-d7b75d39cdfe)
+    (property "Reference" "#PWR?" (id 0) (at 149.86 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VCC" (id 1) (at 149.86 27.94 0))
+    (property "Footprint" "" (id 2) (at 149.86 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 149.86 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 87fd7b94-3fff-4a7f-909e-b95c21831042))
   )
 
   (symbol (lib_id "HPS:GND") (at 91.44 106.68 0) (unit 1)
@@ -1867,7 +1915,13 @@
     (path "/0bd86e28-1642-4d21-96f3-a45a97f24240"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
+    (path "/2e84fd9d-f40c-4116-8b8f-5bdeef4ab66f"
+      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
+    )
     (path "/5f945b73-5855-4b4e-95a7-c5d92ec1256c"
+      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/743bfacd-802c-4d0b-bb24-4fad5a501214"
       (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
     )
     (path "/7f76fa8c-ef00-48fc-a127-184b217b1c7c"
@@ -1875,6 +1929,9 @@
     )
     (path "/80902f7a-43fd-4c0d-913a-9bc17773d97f"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/85527b9e-fc32-4d5e-9c6e-d7b75d39cdfe"
+      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
     )
     (path "/8fb60f21-2946-4698-ab02-c271abf87f0e"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
