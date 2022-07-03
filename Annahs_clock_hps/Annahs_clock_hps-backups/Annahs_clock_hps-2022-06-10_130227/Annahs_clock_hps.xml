@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps-backups/Annahs_clock_hps-2022-06-10_130227/Annahs_clock_hps.kicad_sch</source>
-    <date>Sunday, July 03, 2022 at 12:49:50 AM</date>
+    <date>Sunday, July 03, 2022 at 01:03:39 AM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -359,24 +359,22 @@
       <tstamps>dae78a19-1fcd-4bca-a7a8-31e810ab721c</tstamps>
     </comp>
     <comp ref="J2">
-      <value>PJ-102AH</value>
-      <footprint>footprints:PJ-102AH</footprint>
-      <datasheet>https://www.cuidevices.com/product/resource/pj-102ah.pdf</datasheet>
+      <value>Power_inlet_vertical</value>
+      <footprint>footprints:Wurth-694106402002</footprint>
+      <datasheet>https://www.we-online.com/katalog/datasheet/6941xx402002.pdf</datasheet>
       <fields>
-        <field name="Digikey PN">CP-102AH-ND</field>
-        <field name="MFG">CUI Devices</field>
-        <field name="MPN">PJ-102AH</field>
-        <field name="Mouser PN">490-PJ-102AH</field>
+        <field name="Digikey PN">732-5931-ND</field>
+        <field name="MFG">Wurth</field>
+        <field name="MPN">694106402002</field>
       </fields>
-      <libsource lib="HPS" part="PJ-102AH" description=" 2mm center pin, 5A DC power jack"/>
-      <property name="MFG" value="CUI Devices"/>
-      <property name="MPN" value="PJ-102AH"/>
-      <property name="Digikey PN" value="CP-102AH-ND"/>
-      <property name="Mouser PN" value="490-PJ-102AH"/>
+      <libsource lib="HPS" part="Power_inlet_vertical" description=" 2mm center pin, 5A DC power jack"/>
+      <property name="MFG" value="Wurth"/>
+      <property name="MPN" value="694106402002"/>
+      <property name="Digikey PN" value="732-5931-ND"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>63eef421-fe3b-463c-a66d-6a1abae8329a</tstamps>
+      <tstamps>f2393e9d-3944-42e3-a465-3a363f1f67da</tstamps>
     </comp>
     <comp ref="R1">
       <value>R_0805_10K</value>
@@ -804,12 +802,13 @@
     </comp>
     <comp ref="U3">
       <value>L7805</value>
+      <footprint>footprints:TO-220-3_Vertical</footprint>
       <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</datasheet>
       <libsource lib="HPS" part="L7805" description="Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>13d4e30d-2d77-4560-9d16-f4925b5cccfc</tstamps>
+      <tstamps>19616ff1-44c3-4e50-867a-38c1b926dafa</tstamps>
     </comp>
     <comp ref="U4">
       <value>SC56-11EWA</value>
@@ -1242,18 +1241,17 @@
         <pin num="4" name="B" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="HPS" part="PJ-102AH">
+    <libpart lib="HPS" part="Power_inlet_vertical">
       <description> 2mm center pin, 5A DC power jack</description>
-      <docs>https://www.cuidevices.com/product/resource/pj-102ah.pdf</docs>
+      <docs>https://www.we-online.com/katalog/datasheet/6941xx402002.pdf</docs>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">PJ-102AH</field>
-        <field name="Footprint">footprints:PJ-102AH</field>
-        <field name="Datasheet">https://www.cuidevices.com/product/resource/pj-102ah.pdf</field>
-        <field name="MFG">CUI Devices</field>
-        <field name="MPN">PJ-102AH</field>
-        <field name="Digikey PN">CP-102AH-ND</field>
-        <field name="Mouser PN">490-PJ-102AH</field>
+        <field name="Value">Power_inlet_vertical</field>
+        <field name="Footprint">footprints:Wurth-694106402002</field>
+        <field name="Datasheet">https://www.we-online.com/katalog/datasheet/6941xx402002.pdf</field>
+        <field name="MFG">Wurth</field>
+        <field name="MPN">694106402002</field>
+        <field name="Digikey PN">732-5931-ND</field>
       </fields>
       <pins>
         <pin num="1" name="POLE" type="passive"/>
