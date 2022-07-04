@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps-backups/Annahs_clock_hps-2022-06-10_130227/Annahs_clock_hps.kicad_sch</source>
-    <date>Sunday, July 03, 2022 at 09:48:09 PM</date>
+    <date>Sunday, July 03, 2022 at 11:22:16 PM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -461,52 +461,52 @@
       <tstamps>f14d526a-69d4-440c-a5dc-09c67b596958</tstamps>
     </comp>
     <comp ref="R3">
-      <value>R_0805_4.7K</value>
+      <value>R_0805_47</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7L/727929</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</datasheet>
       <fields>
-        <field name="Digikey PN">311-4.70KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0747RL </field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-074K7L</field>
+        <field name="MPN">RC0805FR-0747RL </field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_4.7K" description=""/>
+      <libsource lib="HPS" part="R_0805_47" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-074K7L"/>
-      <property name="Digikey PN" value="311-4.70KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0747RL "/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-0747RL "/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>488f62db-ccf4-4056-b457-b247821a7e71</tstamps>
+      <tstamps>270cc972-726a-4fe0-b5aa-4e164420d37e</tstamps>
     </comp>
     <comp ref="R4">
-      <value>R_0805_4.7K</value>
+      <value>R_0805_47</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7L/727929</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</datasheet>
       <fields>
-        <field name="Digikey PN">311-4.70KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0747RL </field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-074K7L</field>
+        <field name="MPN">RC0805FR-0747RL </field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_4.7K" description=""/>
+      <libsource lib="HPS" part="R_0805_47" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-074K7L"/>
-      <property name="Digikey PN" value="311-4.70KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0747RL "/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-0747RL "/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0fd51f96-47e5-4e7e-92e0-9407d58f6e84</tstamps>
+      <tstamps>a9314eb7-635f-4333-9eba-82f4c53294ee</tstamps>
     </comp>
     <comp ref="R5">
       <value>R_0805_10K</value>
@@ -1463,6 +1463,28 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="HPS" part="R_0805_47">
+      <docs>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_0805_47</field>
+        <field name="Footprint">footprints:R_0805_2012Metric</field>
+        <field name="Datasheet">https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</field>
+        <field name="MFG">Yageo</field>
+        <field name="Digikey PN">RC0805FR-0747RL </field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="MPN">RC0805FR-0747RL </field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="HPS" part="R_POT_10K">
       <description>Potentiometer, US symbol</description>
       <docs>https://www.bourns.com/docs/Product-Datasheets/3386.pdf</docs>
@@ -1672,11 +1694,11 @@
       <node ref="UI1" pin="6" pinfunction="PD4" pintype="tri_state"/>
     </net>
     <net code="32" name="/VBAT">
-      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="VBAT" pintype="power_in"/>
     </net>
     <net code="33" name="GND">
-      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="BZ1" pin="2" pinfunction="+" pintype="passive"/>
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
@@ -1740,7 +1762,7 @@
     </net>
     <net code="41" name="Net-(J1-Pad4)">
       <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
     </net>
     <net code="42" name="Net-(J1-Pad5)">
       <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
@@ -1767,7 +1789,7 @@
       <node ref="UI1" pin="2" pinfunction="PD0" pintype="tri_state"/>
     </net>
     <net code="48" name="TXD">
-      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
       <node ref="UI1" pin="3" pinfunction="PD1" pintype="tri_state"/>
     </net>
     <net code="49" name="VCC">
