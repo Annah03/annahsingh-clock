@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps-backups/Annahs_clock_hps-2022-06-10_130227/Annahs_clock_hps.kicad_sch</source>
-    <date>Sunday, July 03, 2022 at 07:03:15 PM</date>
+    <date>Sunday, July 03, 2022 at 09:48:09 PM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -848,31 +848,31 @@
     </comp>
     <comp ref="U4">
       <value>SC56-11EWA</value>
-      <footprint>Display_7Segment:Sx56-1xxxxx</footprint>
+      <footprint>footprints:Sx56-1xxxxx</footprint>
       <datasheet>http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</datasheet>
       <fields>
         <field name="Digikey PN">754-1465-5-ND</field>
       </fields>
-      <libsource lib="HPS" part="SC56-11EWA" description="Single digit 7 segment display, high efficiency red, common cathode"/>
+      <libsource lib="" part="SC56-11EWA_1" description="Single digit 7 segment display, high efficiency red, common cathode"/>
       <property name="Digikey PN" value="754-1465-5-ND"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dd7cb9b2-3110-42e3-969d-26385b4e1f12</tstamps>
+      <tstamps>4311d907-6cac-478f-8f97-be860b408887</tstamps>
     </comp>
     <comp ref="U5">
       <value>SC56-11EWA</value>
-      <footprint>Display_7Segment:Sx56-1xxxxx</footprint>
+      <footprint>footprints:Sx56-1xxxxx</footprint>
       <datasheet>http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</datasheet>
       <fields>
         <field name="Digikey PN">754-1465-5-ND</field>
       </fields>
-      <libsource lib="HPS" part="SC56-11EWA" description="Single digit 7 segment display, high efficiency red, common cathode"/>
+      <libsource lib="" part="SC56-11EWA_1" description="Single digit 7 segment display, high efficiency red, common cathode"/>
       <property name="Digikey PN" value="754-1465-5-ND"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>fca8eb71-9918-4521-8f5a-3b1bea01ad17</tstamps>
+      <tstamps>65f52c91-850b-4afa-9fc1-070563d1390b</tstamps>
     </comp>
     <comp ref="UI1">
       <value>ATmega328-PU</value>
@@ -936,6 +936,32 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="" part="SC56-11EWA_1">
+      <description>Single digit 7 segment display, high efficiency red, common cathode</description>
+      <docs>http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</docs>
+      <footprints>
+        <fp>S?39?1*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SC56-11EWA_1</field>
+        <field name="Footprint">footprints:Sx56-1xxxxx</field>
+        <field name="Datasheet">http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</field>
+        <field name="Digikey PN">754-1465-5-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="input"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="CC" type="input"/>
+        <pin num="4" name="C" type="input"/>
+        <pin num="5" name="DP" type="input"/>
+        <pin num="6" name="B" type="input"/>
+        <pin num="7" name="A" type="input"/>
+        <pin num="8" name="CC" type="input"/>
+        <pin num="9" name="F" type="input"/>
+        <pin num="10" name="G" type="input"/>
+      </pins>
+    </libpart>
     <libpart lib="HPS" part="ATmega328-PU">
       <description>20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, DIP-28</description>
       <docs>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en608326</docs>
@@ -1459,32 +1485,6 @@
         <pin num="3" name="3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="HPS" part="SC56-11EWA">
-      <description>Single digit 7 segment display, high efficiency red, common cathode</description>
-      <docs>http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</docs>
-      <footprints>
-        <fp>S?39?1*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">SC56-11EWA</field>
-        <field name="Footprint">Display_7Segment:Sx56-1xxxxx</field>
-        <field name="Datasheet">http://www.kingbrightusa.com/images/catalog/SPEC/sc56-11ewa.pdf</field>
-        <field name="Digikey PN">754-1465-5-ND</field>
-      </fields>
-      <pins>
-        <pin num="1" name="E" type="input"/>
-        <pin num="2" name="D" type="input"/>
-        <pin num="3" name="CC" type="input"/>
-        <pin num="4" name="C" type="input"/>
-        <pin num="5" name="DP" type="input"/>
-        <pin num="6" name="B" type="input"/>
-        <pin num="7" name="A" type="input"/>
-        <pin num="8" name="CC" type="input"/>
-        <pin num="9" name="F" type="input"/>
-        <pin num="10" name="G" type="input"/>
-      </pins>
-    </libpart>
     <libpart lib="HPS" part="TC1602A-01T">
       <description>LCD 16x2 Alphanumeric , 8 bit parallel bus, 5V VDD</description>
       <docs>https://cdn-shop.adafruit.com/datasheets/TC1602A-01T.pdf</docs>
@@ -1523,7 +1523,7 @@
   </libparts>
   <libraries>
     <library logical="HPS">
-      <uri>/Users/annahsingh/Downloads/hps-kicad-library-main 2/symbols/HPS.kicad_sym</uri>
+      <uri>/Users/annahsingh/Downloads/hps-kicad-library-main 4/symbols/HPS.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -1754,7 +1754,7 @@
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="SCL" pintype="input"/>
     </net>
-    <net code="45" name="Net-(U2-Pad18)">
+    <net code="45" name="Net-(R10-Pad2)">
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="U2" pin="18" pinfunction="ISET" pintype="input"/>
     </net>
