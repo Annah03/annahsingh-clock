@@ -5950,22 +5950,6 @@
     (pin "2" (uuid e8f38cc4-eb3e-487d-95a1-e19757a6ff7d))
   )
 
-  (symbol (lib_id "HPS:L7805") (at 241.3 254 0) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid 19616ff1-44c3-4e50-867a-38c1b926dafa)
-    (property "Reference" "U3" (id 0) (at 241.3 246.38 0))
-    (property "Value" "L7805" (id 1) (at 241.3 248.92 0))
-    (property "Footprint" "footprints:TO-220-3_Vertical" (id 2) (at 241.935 257.81 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" (id 3) (at 241.3 255.27 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a1eae7ed-d3cc-4d58-b369-65336532aa65))
-    (pin "2" (uuid 7ccf4ee4-fa2f-43ed-986f-167409ca0d7b))
-    (pin "3" (uuid 0f83dc29-352a-4da0-bd89-9717d8afd633))
-  )
-
   (symbol (lib_id "HPS:GND") (at 330.2 124.46 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 201f018e-6e07-4b74-ac3a-4db2206b9117)
@@ -7643,6 +7627,22 @@
     (pin "1" (uuid d84e7e26-53b3-4306-bb30-cd36889be395))
   )
 
+  (symbol (lib_id "HPS:L7805") (at 241.3 254 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid f75ede11-c916-4c7c-a14c-d0734068f867)
+    (property "Reference" "U3" (id 0) (at 241.3 246.38 0))
+    (property "Value" "L7805" (id 1) (at 241.3 248.92 0))
+    (property "Footprint" "" (id 2) (at 241.935 257.81 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" (id 3) (at 241.3 255.27 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid dbbfdb95-aa82-42ff-8a23-3b94e7d36c0f))
+    (pin "2" (uuid 8723b67f-50a5-4642-823b-104b95a3b58b))
+    (pin "3" (uuid f0f6d31d-2cdd-427c-b661-22cfd18cd459))
+  )
+
   (symbol (lib_id "HPS:Omron_B3F_SPST") (at 173.99 193.04 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid fb96f4b9-2756-4506-ac03-6ae05b2993bd)
@@ -7890,8 +7890,8 @@
     (path "/66c02a44-6c43-444b-a8b0-00cd3fdcb788"
       (reference "U2") (unit 1) (value "MAX7219") (footprint "footprints:DIP-24_W7.62mm")
     )
-    (path "/19616ff1-44c3-4e50-867a-38c1b926dafa"
-      (reference "U3") (unit 1) (value "L7805") (footprint "footprints:TO-220-3_Vertical")
+    (path "/f75ede11-c916-4c7c-a14c-d0734068f867"
+      (reference "U3") (unit 1) (value "L7805") (footprint "footprints:TO-252-2")
     )
     (path "/4311d907-6cac-478f-8f97-be860b408887"
       (reference "U4") (unit 1) (value "SC56-11EWA") (footprint "footprints:Sx56-1xxxxx")
