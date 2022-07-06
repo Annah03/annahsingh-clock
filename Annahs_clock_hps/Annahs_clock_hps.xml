@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps.kicad_sch</source>
-    <date>Tuesday, July 05, 2022 at 05:05:44 PM</date>
+    <date>Tuesday, July 05, 2022 at 09:47:47 PM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -298,6 +298,110 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>84428083-93d3-4c8d-bb5d-d7c47b3e3776</tstamps>
     </comp>
+    <comp ref="C10">
+      <value>C_0805_0.1uf</value>
+      <footprint>footprints:C_0805_2012Metric</footprint>
+      <datasheet>https://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Dielectric">N/A</field>
+        <field name="Digikey PN">478-1395-1-ND</field>
+        <field name="MFG">AVX Corporation</field>
+        <field name="MPN">08055C104KAT2A</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="Voltage">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="C_0805_0.1uf" description="Non polarized capacitor"/>
+      <property name="MFG" value="AVX Corporation"/>
+      <property name="MPN" value="08055C104KAT2A"/>
+      <property name="Digikey PN" value="478-1395-1-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Voltage" value="N/A"/>
+      <property name="Dielectric" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35fbd4d1-9adf-4072-9fe1-621460b4533e</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>C_0805_0.1uf</value>
+      <footprint>footprints:C_0805_2012Metric</footprint>
+      <datasheet>https://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Dielectric">N/A</field>
+        <field name="Digikey PN">478-1395-1-ND</field>
+        <field name="MFG">AVX Corporation</field>
+        <field name="MPN">08055C104KAT2A</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="Voltage">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="C_0805_0.1uf" description="Non polarized capacitor"/>
+      <property name="MFG" value="AVX Corporation"/>
+      <property name="MPN" value="08055C104KAT2A"/>
+      <property name="Digikey PN" value="478-1395-1-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Voltage" value="N/A"/>
+      <property name="Dielectric" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dde7f257-742b-4f8d-85ff-cf554590f958</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>C_0805_0.1uf</value>
+      <footprint>footprints:C_0805_2012Metric</footprint>
+      <datasheet>https://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Dielectric">N/A</field>
+        <field name="Digikey PN">478-1395-1-ND</field>
+        <field name="MFG">AVX Corporation</field>
+        <field name="MPN">08055C104KAT2A</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="Voltage">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="C_0805_0.1uf" description="Non polarized capacitor"/>
+      <property name="MFG" value="AVX Corporation"/>
+      <property name="MPN" value="08055C104KAT2A"/>
+      <property name="Digikey PN" value="478-1395-1-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Voltage" value="N/A"/>
+      <property name="Dielectric" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>85006d3c-8f7d-4750-9534-dbdc983a8e06</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>C_0805_0.1uf</value>
+      <footprint>footprints:C_0805_2012Metric</footprint>
+      <datasheet>https://datasheets.avx.com/X7RDielectric.pdf</datasheet>
+      <fields>
+        <field name="Dielectric">N/A</field>
+        <field name="Digikey PN">478-1395-1-ND</field>
+        <field name="MFG">AVX Corporation</field>
+        <field name="MPN">08055C104KAT2A</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="Voltage">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="C_0805_0.1uf" description="Non polarized capacitor"/>
+      <property name="MFG" value="AVX Corporation"/>
+      <property name="MPN" value="08055C104KAT2A"/>
+      <property name="Digikey PN" value="478-1395-1-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Voltage" value="N/A"/>
+      <property name="Dielectric" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c067bff8-90e3-4885-ad8a-6d398d5a2474</tstamps>
+    </comp>
     <comp ref="D1">
       <value>LED_0805</value>
       <footprint>footprints:LED_0805_2012Metric</footprint>
@@ -411,6 +515,26 @@
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f2393e9d-3944-42e3-a465-3a363f1f67da</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_02x03_Odd_Even</value>
+      <footprint>footprints:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <datasheet>https://drawings-pdf.s3.amazonaws.com/11636.pdf</datasheet>
+      <fields>
+        <field name="Digikey PN">S2011EC-03-ND</field>
+        <field name="MFG">Sullins Connector Solutions</field>
+        <field name="MPN">PRPC003DAAN-RC</field>
+        <field name="Mouser PN">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="Conn_02x03_Odd_Even" description=""/>
+      <property name="MFG" value="Sullins Connector Solutions"/>
+      <property name="MPN" value="PRPC003DAAN-RC"/>
+      <property name="Digikey PN" value="S2011EC-03-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62bfb222-688a-4806-adfa-d3b9a4604387</tstamps>
     </comp>
     <comp ref="R1">
       <value>R_0805_10K</value>
@@ -676,6 +800,126 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>df037ce9-9d76-4aa9-ad55-1f2073b9db73</tstamps>
     </comp>
+    <comp ref="R12">
+      <value>R_0805_10K</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <fields>
+        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fab852c-8adf-40d1-95b1-33c9fefeb87f</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>R_0805_10K</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <fields>
+        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6187b609-75f2-4f66-a800-70ab5ca63b5b</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>R_0805_10K</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <fields>
+        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d15c755-dff2-4b12-84cc-f1042ed9edef</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>R_0805_10K</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <fields>
+        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0337b933-d047-40be-9462-c15ff15674c9</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>R_0805_47</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</datasheet>
+      <fields>
+        <field name="Digikey PN">RC0805FR-0747RL </field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0747RL </field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_47" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="Digikey PN" value="RC0805FR-0747RL "/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-0747RL "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2699d431-f206-4c48-aca5-b35b4fa987df</tstamps>
+    </comp>
     <comp ref="RV1">
       <value>R_POT_10K</value>
       <footprint>footprints:Potentiometer_Bourns_3386P_Vertical</footprint>
@@ -795,6 +1039,26 @@
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b96edd63-901d-4921-926b-28252b064229</tstamps>
+    </comp>
+    <comp ref="SW6">
+      <value>Omron_B3F_SPST</value>
+      <footprint>footprints:SW_SPST_Omron_B3FS-100xP</footprint>
+      <datasheet>https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf</datasheet>
+      <fields>
+        <field name="Digikey PN">SW423CT-ND</field>
+        <field name="MFG">Omron Electronics Inc-EMC Div</field>
+        <field name="MPN">B3FS-1000P</field>
+        <field name="Mouser PN">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="Omron_B3F_SPST" description="Omron B3F Single Pole Single Throw (SPST) 4 pin switch"/>
+      <property name="MFG" value="Omron Electronics Inc-EMC Div"/>
+      <property name="MPN" value="B3FS-1000P"/>
+      <property name="Digikey PN" value="SW423CT-ND"/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7bbc522-cebd-430c-9b88-23511792c003</tstamps>
     </comp>
     <comp ref="U1">
       <value>DS1307_DIP-8</value>
@@ -1158,6 +1422,27 @@
         <field name="MFG">Würth Elektronik</field>
         <field name="MPN">61300611121</field>
         <field name="Digikey PN">732-5319-ND</field>
+        <field name="Mouser PN">N/A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="HPS" part="Conn_02x03_Odd_Even">
+      <docs>https://drawings-pdf.s3.amazonaws.com/11636.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Footprint">footprints:PinHeader_2x03_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://drawings-pdf.s3.amazonaws.com/11636.pdf</field>
+        <field name="MFG">Sullins Connector Solutions</field>
+        <field name="MPN">PRPC003DAAN-RC</field>
+        <field name="Digikey PN">S2011EC-03-ND</field>
         <field name="Mouser PN">N/A</field>
       </fields>
       <pins>
@@ -1554,153 +1839,143 @@
       <node ref="UI1" pin="21" pinfunction="AREF" pintype="passive"/>
     </net>
     <net code="2" name="/Alarm_SW">
-      <node ref="R8" pin="1" pintype="passive"/>
-      <node ref="SW3" pin="3" pinfunction="B" pintype="passive"/>
-      <node ref="SW3" pin="4" pinfunction="B" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
       <node ref="UI1" pin="4" pinfunction="PD2" pintype="tri_state"/>
     </net>
-    <net code="3" name="/Buzzer">
-      <node ref="BZ1" pin="1" pinfunction="-" pintype="passive"/>
-      <node ref="UI1" pin="18" pinfunction="PB4" pintype="tri_state"/>
-    </net>
-    <net code="4" name="/Clk_Crystal1">
+    <net code="3" name="/Clk_Crystal1">
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="UI1" pin="9" pinfunction="XTAL1/PB6" pintype="tri_state"/>
       <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="5" name="/Clk_Crystal2">
+    <net code="4" name="/Clk_Crystal2">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="UI1" pin="10" pinfunction="XTAL2/PB7" pintype="tri_state"/>
       <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="6" name="/Dig0_Com">
-      <node ref="U2" pin="11" pinfunction="DIG_1" pintype="output"/>
+    <net code="5" name="/Dig0_Com">
+      <node ref="U2" pin="2" pinfunction="DIG_0" pintype="output"/>
       <node ref="U5" pin="3" pinfunction="CC" pintype="input"/>
       <node ref="U5" pin="8" pinfunction="CC" pintype="input"/>
     </net>
-    <net code="7" name="/Dig01_A">
+    <net code="6" name="/Dig01_A">
       <node ref="U2" pin="14" pinfunction="SEG_A" pintype="output"/>
       <node ref="U4" pin="7" pinfunction="A" pintype="input"/>
       <node ref="U5" pin="7" pinfunction="A" pintype="input"/>
     </net>
-    <net code="8" name="/Dig01_B">
+    <net code="7" name="/Dig01_B">
       <node ref="U2" pin="16" pinfunction="SEG_B" pintype="output"/>
       <node ref="U4" pin="6" pinfunction="B" pintype="input"/>
       <node ref="U5" pin="6" pinfunction="B" pintype="input"/>
     </net>
-    <net code="9" name="/Dig01_C">
+    <net code="8" name="/Dig01_C">
       <node ref="U2" pin="20" pinfunction="SEG_C" pintype="output"/>
       <node ref="U4" pin="4" pinfunction="C" pintype="input"/>
       <node ref="U5" pin="4" pinfunction="C" pintype="input"/>
     </net>
-    <net code="10" name="/Dig1_Com">
-      <node ref="U2" pin="2" pinfunction="DIG_0" pintype="output"/>
+    <net code="9" name="/Dig1_Com">
+      <node ref="U2" pin="11" pinfunction="DIG_1" pintype="output"/>
       <node ref="U4" pin="3" pinfunction="CC" pintype="input"/>
       <node ref="U4" pin="8" pinfunction="CC" pintype="input"/>
     </net>
-    <net code="11" name="/Dig01_D">
+    <net code="10" name="/Dig01_D">
       <node ref="U2" pin="23" pinfunction="SEG_D" pintype="output"/>
       <node ref="U4" pin="2" pinfunction="D" pintype="input"/>
       <node ref="U5" pin="2" pinfunction="D" pintype="input"/>
     </net>
-    <net code="12" name="/Dig01_DP">
+    <net code="11" name="/Dig01_DP">
       <node ref="U2" pin="22" pinfunction="SEG_DP" pintype="output"/>
       <node ref="U4" pin="5" pinfunction="DP" pintype="input"/>
       <node ref="U5" pin="5" pinfunction="DP" pintype="input"/>
     </net>
-    <net code="13" name="/Dig01_E">
+    <net code="12" name="/Dig01_E">
       <node ref="U2" pin="21" pinfunction="SEG_E" pintype="output"/>
       <node ref="U4" pin="1" pinfunction="E" pintype="input"/>
       <node ref="U5" pin="1" pinfunction="E" pintype="input"/>
     </net>
-    <net code="14" name="/Dig01_F">
+    <net code="13" name="/Dig01_F">
       <node ref="U2" pin="15" pinfunction="SEG_F" pintype="output"/>
       <node ref="U4" pin="9" pinfunction="F" pintype="input"/>
       <node ref="U5" pin="9" pinfunction="F" pintype="input"/>
     </net>
-    <net code="15" name="/Dig01_G">
+    <net code="14" name="/Dig01_G">
       <node ref="U2" pin="17" pinfunction="SEG_G" pintype="output"/>
       <node ref="U4" pin="10" pinfunction="G" pintype="input"/>
       <node ref="U5" pin="10" pinfunction="G" pintype="input"/>
     </net>
-    <net code="16" name="/Down_SW">
-      <node ref="R1" pin="1" pintype="passive"/>
-      <node ref="SW2" pin="3" pinfunction="B" pintype="passive"/>
-      <node ref="SW2" pin="4" pinfunction="B" pintype="passive"/>
+    <net code="15" name="/Down_SW">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
       <node ref="UI1" pin="5" pinfunction="PD3" pintype="tri_state"/>
     </net>
-    <net code="17" name="/Driver_Clk">
-      <node ref="U2" pin="13" pinfunction="CLK" pintype="input"/>
-      <node ref="UI1" pin="19" pinfunction="PB5" pintype="tri_state"/>
-    </net>
-    <net code="18" name="/Driver_Din">
-      <node ref="U2" pin="1" pinfunction="DIN" pintype="input"/>
-      <node ref="UI1" pin="17" pinfunction="PB3" pintype="tri_state"/>
-    </net>
-    <net code="19" name="/Driver_Load">
+    <net code="16" name="/Driver_Load">
       <node ref="U2" pin="12" pinfunction="LOAD" pintype="input"/>
       <node ref="UI1" pin="16" pinfunction="PB2" pintype="tri_state"/>
     </net>
-    <net code="20" name="/LCD_Data4">
+    <net code="17" name="/LCD_Data4">
       <node ref="DS1" pin="11" pinfunction="D4" pintype="input"/>
       <node ref="UI1" pin="12" pinfunction="PD6" pintype="tri_state"/>
     </net>
-    <net code="21" name="/LCD_Data5">
+    <net code="18" name="/LCD_Data5">
       <node ref="DS1" pin="12" pinfunction="D5" pintype="input"/>
       <node ref="UI1" pin="13" pinfunction="PD7" pintype="tri_state"/>
     </net>
-    <net code="22" name="/LCD_Data6">
+    <net code="19" name="/LCD_Data6">
       <node ref="DS1" pin="13" pinfunction="D6" pintype="input"/>
       <node ref="UI1" pin="14" pinfunction="PB0" pintype="tri_state"/>
     </net>
-    <net code="23" name="/LCD_Data7">
+    <net code="20" name="/LCD_Data7">
       <node ref="DS1" pin="14" pinfunction="D7" pintype="input"/>
       <node ref="UI1" pin="15" pinfunction="PB1" pintype="tri_state"/>
     </net>
-    <net code="24" name="/LCD_Enable">
+    <net code="21" name="/LCD_Enable">
       <node ref="DS1" pin="6" pinfunction="E" pintype="input"/>
       <node ref="UI1" pin="24" pinfunction="PC1" pintype="tri_state"/>
     </net>
-    <net code="25" name="/LCD_RS">
+    <net code="22" name="/LCD_RS">
       <node ref="DS1" pin="4" pinfunction="RS" pintype="input"/>
       <node ref="UI1" pin="23" pinfunction="PC0" pintype="tri_state"/>
     </net>
-    <net code="26" name="/RTC_SCL">
+    <net code="23" name="/RTC_SCL">
       <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="SCL" pintype="input"/>
       <node ref="UI1" pin="28" pinfunction="PC5" pintype="tri_state"/>
     </net>
-    <net code="27" name="/RTC_SDA">
+    <net code="24" name="/RTC_SDA">
       <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="SDA" pintype="bidirectional"/>
       <node ref="UI1" pin="27" pinfunction="PC4" pintype="tri_state"/>
     </net>
-    <net code="28" name="/RTC_XTAL1">
+    <net code="25" name="/RTC_XTAL1">
       <node ref="U1" pin="1" pinfunction="X1" pintype="input"/>
       <node ref="Y2" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="29" name="/RTC_XTAL2">
+    <net code="26" name="/RTC_XTAL2">
       <node ref="U1" pin="2" pinfunction="X2" pintype="input"/>
       <node ref="Y2" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="30" name="/Select_SW">
-      <node ref="R2" pin="1" pintype="passive"/>
-      <node ref="SW1" pin="3" pinfunction="B" pintype="passive"/>
-      <node ref="SW1" pin="4" pinfunction="B" pintype="passive"/>
+    <net code="27" name="/Select_SW">
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
       <node ref="UI1" pin="11" pinfunction="PD5" pintype="tri_state"/>
     </net>
-    <net code="31" name="/Up_SW">
-      <node ref="R9" pin="1" pintype="passive"/>
-      <node ref="SW4" pin="3" pinfunction="B" pintype="passive"/>
-      <node ref="SW4" pin="4" pinfunction="B" pintype="passive"/>
+    <net code="28" name="/Up_SW">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
       <node ref="UI1" pin="6" pinfunction="PD4" pintype="tri_state"/>
     </net>
-    <net code="32" name="/VBAT">
+    <net code="29" name="/VBAT">
       <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="VBAT" pintype="power_in"/>
     </net>
-    <net code="33" name="GND">
+    <net code="30" name="GND">
       <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="BZ1" pin="2" pinfunction="+" pintype="passive"/>
       <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="C5" pin="2" pintype="passive"/>
@@ -1713,7 +1988,9 @@
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="OUT" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="SW2" pin="1" pinfunction="A" pintype="passive"/>
@@ -1724,6 +2001,8 @@
       <node ref="SW4" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="SW5" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="SW5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="SW6" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="SW6" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="GND" pintype="power_in"/>
       <node ref="U2" pin="4" pinfunction="GND" pintype="power_in"/>
       <node ref="U2" pin="9" pinfunction="GND" pintype="power_in"/>
@@ -1731,58 +2010,83 @@
       <node ref="UI1" pin="22" pinfunction="GND" pintype="power_in"/>
       <node ref="UI1" pin="8" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="34" name="LED_SCK">
+    <net code="31" name="LED_SCK">
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="UI1" pin="25" pinfunction="PC2" pintype="tri_state"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="CLK" pintype="input"/>
+      <node ref="UI1" pin="19" pinfunction="PB5" pintype="tri_state"/>
     </net>
-    <net code="35" name="Net-(C3-Pad2)">
+    <net code="32" name="MISO">
+      <node ref="BZ1" pin="1" pinfunction="-" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="UI1" pin="18" pinfunction="PB4" pintype="tri_state"/>
+    </net>
+    <net code="33" name="MOSI">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="DIN" pintype="input"/>
+      <node ref="UI1" pin="17" pinfunction="PB3" pintype="tri_state"/>
+    </net>
+    <net code="34" name="Net-(C3-Pad2)">
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
     </net>
-    <net code="36" name="Net-(C6-Pad1)">
+    <net code="35" name="Net-(C6-Pad1)">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="POLE" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="IN" pintype="power_in"/>
     </net>
-    <net code="37" name="Net-(D1-Pad1)">
+    <net code="36" name="Net-(D1-Pad1)">
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
-    <net code="38" name="Net-(DS1-Pad3)">
+    <net code="37" name="Net-(DS1-Pad3)">
       <node ref="DS1" pin="3" pinfunction="VO" pintype="input"/>
       <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(DS1-Pad15)">
+    <net code="38" name="Net-(DS1-Pad15)">
       <node ref="DS1" pin="15" pinfunction="LED(+)" pintype="power_in"/>
-      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(DS1-Pad16)">
+    <net code="39" name="Net-(DS1-Pad16)">
       <node ref="DS1" pin="16" pinfunction="LED(-)" pintype="power_in"/>
-      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW6" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="SW6" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(J1-Pad4)">
+    <net code="40" name="Net-(J1-Pad4)">
       <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="42" name="Net-(J1-Pad5)">
+    <net code="41" name="Net-(J1-Pad5)">
       <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(R6-Pad2)">
-      <node ref="R6" pin="2" pintype="passive"/>
-      <node ref="U1" pin="5" pinfunction="SDA" pintype="bidirectional"/>
+    <net code="42" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="SW2" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="44" name="Net-(R7-Pad2)">
-      <node ref="R7" pin="2" pintype="passive"/>
-      <node ref="U1" pin="6" pinfunction="SCL" pintype="input"/>
+    <net code="43" name="Net-(R2-Pad1)">
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="SW1" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="45" name="Net-(R10-Pad2)">
+    <net code="44" name="Net-(R8-Pad1)">
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="SW3" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="SW3" pin="4" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="45" name="Net-(R9-Pad1)">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="SW4" pin="4" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="46" name="Net-(R10-Pad2)">
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="U2" pin="18" pinfunction="ISET" pintype="input"/>
-    </net>
-    <net code="46" name="RESET">
-      <node ref="R5" pin="1" pintype="passive"/>
-      <node ref="UI1" pin="1" pinfunction="~{RESET}/PC6" pintype="tri_state"/>
     </net>
     <net code="47" name="RXD">
       <node ref="R4" pin="1" pintype="passive"/>
@@ -1798,12 +2102,17 @@
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="DS1" pin="2" pinfunction="VDD" pintype="power_in"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="VCC" pintype="power_in"/>
       <node ref="U2" pin="19" pinfunction="V+" pintype="power_in"/>
       <node ref="U3" pin="3" pinfunction="OUT" pintype="power_out"/>
@@ -1852,13 +2161,19 @@
     <net code="63" name="unconnected-(U2-Pad24)">
       <node ref="U2" pin="24" pinfunction="DOUT" pintype="output+no_connect"/>
     </net>
-    <net code="64" name="unconnected-(UI1-Pad26)">
+    <net code="64" name="unconnected-(UI1-Pad25)">
+      <node ref="UI1" pin="25" pinfunction="PC2" pintype="tri_state+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(UI1-Pad26)">
       <node ref="UI1" pin="26" pinfunction="PC3" pintype="tri_state+no_connect"/>
     </net>
-    <net code="65" name="~{RESET}">
+    <net code="66" name="~{RESET}">
       <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
       <node ref="SW5" pin="3" pinfunction="B" pintype="passive"/>
       <node ref="SW5" pin="4" pinfunction="B" pintype="passive"/>
+      <node ref="UI1" pin="1" pinfunction="~{RESET}/PC6" pintype="tri_state"/>
     </net>
   </nets>
 </export>
