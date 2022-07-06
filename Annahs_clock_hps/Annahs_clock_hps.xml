@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps.kicad_sch</source>
-    <date>Tuesday, July 05, 2022 at 09:47:47 PM</date>
+    <date>Wednesday, July 06, 2022 at 11:52:42 AM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -801,100 +801,100 @@
       <tstamps>df037ce9-9d76-4aa9-ad55-1f2073b9db73</tstamps>
     </comp>
     <comp ref="R12">
-      <value>R_0805_10K</value>
+      <value>R_0805_1K</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</datasheet>
       <fields>
-        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0710KL</field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="MPN">RC0805FR-071KL</field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <libsource lib="HPS" part="R_0805_1K" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-0710KL"/>
-      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0710KL"/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-071KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8fab852c-8adf-40d1-95b1-33c9fefeb87f</tstamps>
+      <tstamps>e711e3ba-45a9-494d-a0d2-d0c2a54a01a3</tstamps>
     </comp>
     <comp ref="R13">
-      <value>R_0805_10K</value>
+      <value>R_0805_1K</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</datasheet>
       <fields>
-        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0710KL</field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="MPN">RC0805FR-071KL</field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <libsource lib="HPS" part="R_0805_1K" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-0710KL"/>
-      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0710KL"/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-071KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>6187b609-75f2-4f66-a800-70ab5ca63b5b</tstamps>
+      <tstamps>268f4577-33cf-4e76-aee4-e02ab92f65de</tstamps>
     </comp>
     <comp ref="R14">
-      <value>R_0805_10K</value>
+      <value>R_0805_1K</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</datasheet>
       <fields>
-        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0710KL</field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="MPN">RC0805FR-071KL</field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <libsource lib="HPS" part="R_0805_1K" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-0710KL"/>
-      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0710KL"/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-071KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>3d15c755-dff2-4b12-84cc-f1042ed9edef</tstamps>
+      <tstamps>9da1f584-5f69-450b-a140-88cdedc0966a</tstamps>
     </comp>
     <comp ref="R15">
-      <value>R_0805_10K</value>
+      <value>R_0805_1K</value>
       <footprint>footprints:R_0805_2012Metric</footprint>
-      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535</datasheet>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</datasheet>
       <fields>
-        <field name="Digikey PN">311-10.0KCRCT-ND</field>
+        <field name="Digikey PN">RC0805FR-0710KL</field>
         <field name="MFG">Yageo</field>
-        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="MPN">RC0805FR-071KL</field>
         <field name="Mouser PN">N/A</field>
         <field name="Power">N/A</field>
         <field name="Tolerance">N/A</field>
       </fields>
-      <libsource lib="HPS" part="R_0805_10K" description=""/>
+      <libsource lib="HPS" part="R_0805_1K" description=""/>
       <property name="MFG" value="Yageo"/>
-      <property name="MPN" value="RC0805FR-0710KL"/>
-      <property name="Digikey PN" value="311-10.0KCRCT-ND"/>
+      <property name="Digikey PN" value="RC0805FR-0710KL"/>
       <property name="Mouser PN" value="N/A"/>
       <property name="Power" value="N/A"/>
       <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-071KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>0337b933-d047-40be-9462-c15ff15674c9</tstamps>
+      <tstamps>057c0ef0-7f00-4292-8c95-8c3477abef7f</tstamps>
     </comp>
     <comp ref="R16">
       <value>R_0805_47</value>
@@ -1704,6 +1704,28 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="HPS" part="R_0805_1K">
+      <docs>https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_0805_1K</field>
+        <field name="Footprint">footprints:R_0805_2012Metric</field>
+        <field name="Datasheet">https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444</field>
+        <field name="MFG">Yageo</field>
+        <field name="Digikey PN">RC0805FR-0710KL</field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+        <field name="MPN">RC0805FR-071KL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="HPS" part="R_0805_2.2K">
       <docs>https://www.digikey.com/en/products/detail/yageo/RC0805FR-072K2L/727676</docs>
       <footprints>
@@ -1990,7 +2012,7 @@
       <node ref="J2" pin="2" pinfunction="OUT" pintype="passive"/>
       <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
-      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="SW2" pin="1" pinfunction="A" pintype="passive"/>
@@ -2112,7 +2134,7 @@
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
-      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="VCC" pintype="power_in"/>
       <node ref="U2" pin="19" pinfunction="V+" pintype="power_in"/>
       <node ref="U3" pin="3" pinfunction="OUT" pintype="power_out"/>
