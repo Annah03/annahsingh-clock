@@ -4,7 +4,7 @@
 RtcDS1307<TwoWire> Rtc(Wire);
 
 LedControl lc=LedControl(11,13,10,1);
-unsigned long delaytime=450;
+unsigned long delaytime = 450;
 unsigned hour_dig1;
 int hours;
 unsigned hour_dig2;
