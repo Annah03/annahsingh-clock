@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/annahsingh/Documents/GitHub/annahsingh-clock/Annahs_clock_hps/Annahs_clock_hps.kicad_sch</source>
-    <date>Wednesday, July 06, 2022 at 11:52:42 AM</date>
+    <date>Friday, July 08, 2022 at 06:40:14 PM</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -449,7 +449,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>baa56dc5-63db-4b28-93af-eedb90371195</tstamps>
+      <tstamps>82ae5aa3-b274-4511-a54e-cb3dc7e3f820</tstamps>
     </comp>
     <comp ref="H2">
       <value>MountingHole</value>
@@ -458,7 +458,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8f120e02-0494-4cf8-8961-ca52cba88fd5</tstamps>
+      <tstamps>42a0823e-983e-4689-b78c-db849eda87f3</tstamps>
     </comp>
     <comp ref="H3">
       <value>MountingHole</value>
@@ -467,7 +467,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7d0024d2-05a8-4363-857a-6007ca6a934e</tstamps>
+      <tstamps>51904fe3-3d16-4324-8bcb-6401403963e8</tstamps>
     </comp>
     <comp ref="H4">
       <value>MountingHole</value>
@@ -476,7 +476,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a991fe0d-52c2-4893-9ed7-10e1dead7574</tstamps>
+      <tstamps>5f81dc37-4e23-40d8-94b5-7f388ccaa289</tstamps>
     </comp>
     <comp ref="J1">
       <value>Conn_01x06</value>
@@ -919,6 +919,30 @@
       <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2699d431-f206-4c48-aca5-b35b4fa987df</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>R_0805_47</value>
+      <footprint>footprints:R_0805_2012Metric</footprint>
+      <datasheet>https://www.digikey.com/en/products/detail/yageo/RC0805FR-0747RL/727972</datasheet>
+      <fields>
+        <field name="Digikey PN">RC0805FR-0747RL </field>
+        <field name="MFG">Yageo</field>
+        <field name="MPN">RC0805FR-0747RL </field>
+        <field name="Mouser PN">N/A</field>
+        <field name="Power">N/A</field>
+        <field name="Tolerance">N/A</field>
+      </fields>
+      <libsource lib="HPS" part="R_0805_47" description=""/>
+      <property name="MFG" value="Yageo"/>
+      <property name="Digikey PN" value="RC0805FR-0747RL "/>
+      <property name="Mouser PN" value="N/A"/>
+      <property name="Power" value="N/A"/>
+      <property name="Tolerance" value="N/A"/>
+      <property name="MPN" value="RC0805FR-0747RL "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Annahs_clock_hps.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3e16e0b-d3b0-459e-afff-02b122db8c8e</tstamps>
     </comp>
     <comp ref="RV1">
       <value>R_POT_10K</value>
@@ -1618,7 +1642,6 @@
       <fields>
         <field name="Reference">H</field>
         <field name="Value">MountingHole</field>
-        <field name="Footprint">footprints:MountingHole_3.2mm_M3</field>
         <field name="Datasheet">~</field>
       </fields>
     </libpart>
@@ -2012,6 +2035,8 @@
       <node ref="J2" pin="2" pinfunction="OUT" pintype="passive"/>
       <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
       <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="A" pintype="passive"/>
@@ -2067,7 +2092,7 @@
     </net>
     <net code="38" name="Net-(DS1-Pad15)">
       <node ref="DS1" pin="15" pinfunction="LED(+)" pintype="power_in"/>
-      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
     </net>
     <net code="39" name="Net-(DS1-Pad16)">
       <node ref="DS1" pin="16" pinfunction="LED(-)" pintype="power_in"/>
@@ -2088,27 +2113,27 @@
       <node ref="SW2" pin="3" pinfunction="B" pintype="passive"/>
       <node ref="SW2" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(R2-Pad1)">
+    <net code="43" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U2" pin="18" pinfunction="ISET" pintype="input"/>
+    </net>
+    <net code="44" name="Net-(R13-Pad2)">
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="SW1" pin="3" pinfunction="B" pintype="passive"/>
       <node ref="SW1" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="44" name="Net-(R8-Pad1)">
+    <net code="45" name="Net-(R14-Pad2)">
       <node ref="R14" pin="2" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="SW3" pin="3" pinfunction="B" pintype="passive"/>
       <node ref="SW3" pin="4" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="45" name="Net-(R9-Pad1)">
+    <net code="46" name="Net-(R15-Pad2)">
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
       <node ref="SW4" pin="3" pinfunction="B" pintype="passive"/>
       <node ref="SW4" pin="4" pinfunction="B" pintype="passive"/>
-    </net>
-    <net code="46" name="Net-(R10-Pad2)">
-      <node ref="R10" pin="2" pintype="passive"/>
-      <node ref="U2" pin="18" pinfunction="ISET" pintype="input"/>
     </net>
     <net code="47" name="RXD">
       <node ref="R4" pin="1" pintype="passive"/>
@@ -2127,7 +2152,7 @@
       <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
-      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
