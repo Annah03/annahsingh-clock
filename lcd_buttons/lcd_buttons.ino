@@ -10,7 +10,6 @@
 #include <RtcDS1307.h>
 #include <DS1307RTC.h>
 RtcDS1307<TwoWire> Rtc(Wire);
-#include <TimeLib.h> 
 
 unsigned min_dig1;
 unsigned min_dig2;
@@ -58,7 +57,7 @@ void setup ()
     Serial.println(__TIME__);
 
     Rtc.Begin(); 
-    delay(3000);    
+    delay(100);    
     RtcDateTime compiled = RtcDateTime(__DATE__, __TIME__);
     printDateTime(compiled);
     Serial.println();
@@ -104,7 +103,7 @@ void setup ()
 
 void loop () 
 {   
-    delay(10000);
+    delay(500);
     if (!Rtc.IsDateTimeValid()) 
     {
         if (Rtc.LastError() != 0)
@@ -123,7 +122,7 @@ void loop ()
     printDateTime(now);
     Serial.println();
 
-    delay(500); // ten seconds
+    delay(100); // ten seconds
 }
 
 #define countof(a) (sizeof(a) / sizeof(a[0]))
@@ -149,7 +148,7 @@ void printDateTime(const RtcDateTime& dt)
   upState = digitalRead(upButton);
   Serial.println(downState);
   
-  if (downState == HIGH){
+  if (downState == LOW){
         Serial.println("down button pressed");
         varHr = dt.Hour();
         varMin = dt.Minute();
@@ -158,7 +157,8 @@ void printDateTime(const RtcDateTime& dt)
         varmm = dt.Month();
         varyy = dt.Year();
         varMin--;   //subtract one minute from the current tine
-        setTime(varHr, varMin, varSec, vardd, varmm, varyy);
+        RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+        Rtc.SetDateTime(dateTime);
   }
     lcd.clear();         
     Minutes = varMin; 
@@ -173,5 +173,5 @@ void printDateTime(const RtcDateTime& dt)
         for (int i = 1; i <= min_dig2; i++){
       lcd.print(char(255)); 
     } 
-    delay(500);
+    delay(0);
 }
