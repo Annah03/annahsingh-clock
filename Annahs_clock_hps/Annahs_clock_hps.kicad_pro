@@ -481,7 +481,7 @@
       "idf": "",
       "netlist": "../../../../../../Applications/KiCad/KiCad.app/Contents/Applications/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Annahs_clock_hps.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
