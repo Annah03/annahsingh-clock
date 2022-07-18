@@ -365,7 +365,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../STEP and BOM/Annahs_clock_hps.STEP",
       "vrml": ""
     },
     "page_layout_descr_file": ""
