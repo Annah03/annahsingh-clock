@@ -1,3 +1,13 @@
+#include <RtcDS3231.h>
+#include <RtcDS1302.h>
+#include <RtcTemperature.h>
+#include <RtcUtility.h>
+#include <EepromAT24C32.h>
+#include <RtcDS1307.h>
+#include <ThreeWire.h>
+#include <RtcDateTime.h>
+#include <RtcDS3234.h>
+
 
 //include all needed libraries
 #include "LedControl.h"
@@ -16,6 +26,8 @@ unsigned long delaytime = 450;
 unsigned long timeReference = 0;
 unsigned hour_dig1;
 unsigned hour_dig2;
+unsigned long buttonTime = 0;
+unsigned long timeLimit;
 
 //initalize buttons
 const int downButton = 3;
@@ -25,7 +37,8 @@ const int alarmButton = 12;
 int downState = 0;
 int upState = 0;
 int setState = 0;
-int alarmState = 0;
+int alarmState = 0; 
+int buttonPresses = 0;
 
 //RTC
 int varMin = 0;
@@ -58,12 +71,11 @@ void setup() {
 
     //setup lcd
     lcd.begin(16, 2);
+
+    //setup 7-seg
     lc.shutdown(0,false);
     lc.setIntensity(0,8);
     lc.clearDisplay(0);
-
-    //setup 7-seg
-
 
     //setup rtc
     Serial.begin(57600);
@@ -119,27 +131,28 @@ void setup() {
 }
 
 //RTC is occasionally monitored, buttons are always monitored
-void loop() {
-    if (millis()-timeReference>600)
-      {
-      if (!Rtc.IsDateTimeValid()) 
-      {
-          if (Rtc.LastError() != 0)
-          {
-              Serial.print("RTC communications error = ");
-              Serial.println(Rtc.LastError());
-          }
-          else
-          {
-              Serial.println("RTC lost confidence in the DateTime!");
-          }
-      }
-      RtcDateTime now = Rtc.GetDateTime();
-  
-      printDateTime(now);
-      Serial.println();
-      }
-     void Buttons();
+void loop () 
+{   
+    delay(500);
+    if (!Rtc.IsDateTimeValid()) 
+    {
+        if (Rtc.LastError() != 0)
+        {
+            Serial.print("RTC communications error = ");
+            Serial.println(Rtc.LastError());
+        }
+        else
+        {
+            Serial.println("RTC lost confidence in the DateTime!");
+        }
+    }
+
+    RtcDateTime now = Rtc.GetDateTime();
+
+    printDateTime(now);
+    Serial.println();
+
+    delay(100); 
 }
 
 #define countof(a) (sizeof(a) / sizeof(a[0]))
@@ -149,8 +162,46 @@ void Buttons()
 {
   downState = digitalRead(downButton);
   upState = digitalRead(upButton);
+  setState = digitalRead(downButton);
+  alarmState = digitalRead(alarmButton);
   
+  //check how many times set was pressed 
+  if (setState == LOW) {
+    delay(200);
+    Serial.println("Button pressed once");
+
+    if (buttonPresses = 0){
+      buttonTime = millis();
+      timeLimit = buttonTime + 500;
+      buttonPresses = 1;
+    }
+    else if (buttonPresses = 1 && millis() < timeLimit){
+      if (setState == LOW){
+        digitalWrite(setButton, HIGH);
+        setState == HIGH;
+        buttonPresses = 2;
+        Serial.println("Button pressed twice");
+      }
+      else if (setState == HIGH){
+        digitalWrite(setButton, LOW);
+        setState == LOW;
+      }
+    else if (buttonPresses = 1 && timeLimit! = 0 && millis() > timeLimit){
+      Serial.println("Button pressed once");
+    }
+ if (buttonPresses == 1){
+  void changeTime();
+ }
+ else if (buttonPresses == 2){
+  void setAlarm();
+    }
+    
+ //set everything back to 0
+ buttonPresses = 0;
+ buttonTime = 0;
+ timeLimit = 0;
 }
+void changeTime()
 
 
 
