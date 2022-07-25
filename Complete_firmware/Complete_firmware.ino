@@ -1,14 +1,3 @@
-#include <RtcDS3231.h>
-#include <RtcDS1302.h>
-#include <RtcTemperature.h>
-#include <RtcUtility.h>
-#include <EepromAT24C32.h>
-#include <RtcDS1307.h>
-#include <ThreeWire.h>
-#include <RtcDateTime.h>
-#include <RtcDS3234.h>
-
-
 //include all needed libraries
 #include "LedControl.h"
 #include <LiquidCrystal.h>
@@ -131,9 +120,8 @@ void setup() {
 }
 
 //RTC is occasionally monitored, buttons are always monitored
-void loop () 
-{   
-    delay(500);
+void loop () {
+   if (millis()-timeReference>600){
     if (!Rtc.IsDateTimeValid()) 
     {
         if (Rtc.LastError() != 0)
@@ -146,13 +134,14 @@ void loop ()
             Serial.println("RTC lost confidence in the DateTime!");
         }
     }
-
     RtcDateTime now = Rtc.GetDateTime();
 
     printDateTime(now);
     Serial.println();
-
+    
     delay(100); 
+}
+  void Buttons();
 }
 
 #define countof(a) (sizeof(a) / sizeof(a[0]))
@@ -189,19 +178,23 @@ void Buttons()
     else if (buttonPresses = 1 && timeLimit! = 0 && millis() > timeLimit){
       Serial.println("Button pressed once");
     }
+    }
  if (buttonPresses == 1){
   void changeTime();
  }
  else if (buttonPresses == 2){
   void setAlarm();
-    }
+}
     
  //set everything back to 0
  buttonPresses = 0;
  buttonTime = 0;
  timeLimit = 0;
 }
-void changeTime()
+
+void changeTime(){
+  
+}
 
 
 
