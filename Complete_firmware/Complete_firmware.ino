@@ -147,7 +147,7 @@ void loop () {
     
     delay(100); 
 }
-  
+  void Buttons();
   //if alarm time = rtc time set alarm off
   void Alarm();
 }
@@ -207,7 +207,7 @@ void changeTime(){
   while (upState == HIGH && downState == HIGH){
     
     // clear 7-seg
-    void clearDisplay();
+    clearDisplay();
     delay(100);
     
     //print 7-seg time
@@ -306,6 +306,7 @@ void changeTime(){
         RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
         Rtc.SetDateTime(dateTime); 
     }
+    //select button resumes time display
 }
 }
 /*void setAlarm(){
