@@ -147,7 +147,7 @@ void loop () {
     
     delay(100); 
 }
-  void Buttons();
+  
   //if alarm time = rtc time set alarm off
   void Alarm();
 }
