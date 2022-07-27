@@ -28,7 +28,7 @@ int upState = 0;
 int setState = 0;
 int alarmState = 0; 
 int buttonPresses = 0;
-int buzzer = A1;
+int buzzer = 2;
 
 //RTC
 int varMin = 0;
