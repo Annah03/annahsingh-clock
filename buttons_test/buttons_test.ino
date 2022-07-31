@@ -9,6 +9,7 @@ int setState = 0;
 int alarmState = 0;
 
 void setup() {
+  Serial.begin(57600);
   //setup buttons
   pinMode(downButton, INPUT);
   pinMode(upButton, INPUT);
@@ -22,6 +23,7 @@ void loop() {
   upState == digitalRead(upButton);
   alarmState == digitalRead(alarmButton);
   setState == digitalRead(setButton);
+
   
   if (downState == LOW){
     Serial.println("down button pressed");
