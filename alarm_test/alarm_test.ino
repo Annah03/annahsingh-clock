@@ -1,15 +1,21 @@
 
-int buzzer=2;
-void setup() {
-   Serial.begin(9600);
-   pinMode(A1,OUTPUT);
+
+#define buzzer 2 //change to any output pin (not analog inputs) 
+
+void setup() { //run this code once
+  pinMode(buzzer, OUTPUT); //tell arduino the buzzer is an output device
 }
 
-void loop() {
-   delay(360000);
-   tone(buzzer,200,6000);
-   Serial.println("Alarm on");
-   delay(1000);
-   noTone(buzzer);
-   Serial.println("Alarm off");
+void loop(){ //loop forever...
+  
+  for(int i=0; i<255; i++) { //do this 255 times
+    analogWrite(buzzer, i); //raise the voltage sent out of the pin by 1
+    delay(10); //wait 10 milliseconds to repeat 
+  }
+
+  for(int i=255; i>0; i--) { // do this 255 times
+    analogWrite(buzzer, i); //lower the voltage sent out of the pin by 1
+    delay(10); //wait 10 milliseconds to repeat
+    
+  }
 }

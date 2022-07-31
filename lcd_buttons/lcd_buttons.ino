@@ -122,7 +122,7 @@ void loop ()
     printDateTime(now);
     Serial.println();
 
-    delay(100); // ten seconds
+    delay(100); 
 }
 
 #define countof(a) (sizeof(a) / sizeof(a[0]))
