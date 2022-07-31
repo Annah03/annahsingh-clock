@@ -104,31 +104,24 @@ void loop ()
 
 void printDateTime(const RtcDateTime& dt)
 { 
-    char datestring[20];
-    String meridiem = " am"; 
-    int hour = dt.Hour();
-    if (hour>12)
-              {
-                hour = hour-12;
-                meridiem = " pm";
-              }
+    char datestring[20]; 
     snprintf_P(datestring, 
             countof(datestring),
             PSTR("%02u/%02u/%04u %02u:%02u:%02u"),
             dt.Month(),
             dt.Day(),
             dt.Year(),
-            hour,
+            dt.Hour(),
             dt.Minute(),
             dt.Second() );
     Serial.print(datestring);
-    Serial.print(meridiem);
+
     
     hours = dt.Hour();
     hour_dig1 = (hours/10U)%10;
     hour_dig2 = (hours/1U)%10;
 
-    lc.setDigit(0,1,hour_dig1,false);
-    lc.setDigit(0,0,hour_dig2,false);
+    lc.setDigit(0,0,hour_dig1,false);
+    lc.setDigit(0,1,hour_dig2,false);
     
 }
