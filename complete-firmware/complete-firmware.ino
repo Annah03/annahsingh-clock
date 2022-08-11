@@ -34,8 +34,8 @@ int Minutes = 0;
 int time_min = 0;
 int time_hours = 0;
 
-int alarmMin = 0;
-int alarmHr = 0;
+int alarmMin;
+int alarmHr;
 
 // for the 16x2 LCD
 #define rs A0 
@@ -151,6 +151,7 @@ void checkRtc()
   delay(100);  
 }
 }
+//check if the alarm should be turned on
 void checkAlarm()
 {
   if ((alarmHr == hours) && (alarmMin == Minutes)){
@@ -158,9 +159,24 @@ void checkAlarm()
     //run alarm
     while (millis()-alarmTime < 60000){
           int alarmStatus = 1;
-
-    if ((alarmStatus == 1) && (millis-alarmTime<6000)){
-      
+//potential issue 255 times might be less than one minute
+    if ((alarmStatus == 1) && (millis()-alarmTime<6000)){
+      for(int i=0; i<255; i++) { //do this 255 times
+        analogWrite(buzzer, i); //raise the voltage sent out of the pin by 1
+        delay(5000); //wait 5 seconds to repeat 
+        }
+      for(int i=255; i>0; i--) { // do this 255 times
+        analogWrite(buzzer, i); //lower the voltage sent out of the pin by 1
+        delay(5000); //wait 5 seconds to repeat
+        }  
+    }
+    else if ((alarmStatus == 1) && (alarmState == LOW)){
+      noTone(buzzer);
+      alarmStatus = 0;
+    }
+    else if ((alarmStatus==1)&&(millis()-alarmTime>=6000)){
+      noTone(buzzer);
+      alarmStatus = 0;
     }
   }
 }
