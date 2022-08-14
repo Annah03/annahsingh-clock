@@ -1,5 +1,6 @@
+
 //include all the libraries
-#include "LedControl.h"
+#include <LedControl.h>
 #include <LiquidCrystal.h>
 #include <Wire.h>
 #include <RtcDS1307.h>
@@ -222,7 +223,7 @@ void declareTime(){
   //blink 7-seg display 
   if (timeSelect == 1){
    while ((upState == HIGH) && (downState == HIGH)){
-      LedControl.clearDisplay(0);
+      clearDisplay(0);
       delay(100);
 
     //print 7-seg time
