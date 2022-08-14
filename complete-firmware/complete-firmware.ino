@@ -60,6 +60,12 @@ void setup() {
     pinMode(setButton, INPUT); 
     pinMode(buzzer, OUTPUT);
 
+    //Button States
+    downState == digitalRead(downButton);
+    upState == digitalRead(upButton);
+    setState == digitalRead(setButton);
+    alarmState == digitalRead(setButton);
+
     //setup lcd
     lcd.begin(16, 2);
     
@@ -125,6 +131,7 @@ void setup() {
 void loop() {
 checkRtc();
 checkAlarm();
+checkButtons();
 }
 
 void checkRtc()
@@ -181,6 +188,67 @@ void checkAlarm()
   }
 }
 }
+void checkButtons(){
+  int clicks = 0;
+  if (setState == LOW){
+    int buttonRef = millis();
+    while(millis()-buttonRef<2000){
+      if (setState == LOW){
+         clicks = 1;
+      }
+      else if (setState == HIGH){
+        clicks = 0;
+      }
+    }
+  }
+  if (clicks == 0){
+    declareTime();
+  }
+  else if (clicks == 1){
+    setAlarm();
+  }
+}
+
+void declareTime(){
+  int lastState = alarmState;
+  int timeSelect;
+  alarmState = digitalRead(alarmButton);
+  if (alarmState == LOW && lastState == HIGH){
+    timeSelect = 1;
+  }
+  else {
+    timeSelect = 0;                           
+  }
+  //blink 7-seg display 
+  if (timeSelect == 1){
+   while ((upState == HIGH) && (downState == HIGH)){
+      LedControl.clearDisplay(0);
+      delay(100);
+
+    //print 7-seg time
+        snprintf_P(datestring, 
+            countof(datestring),
+            PSTR("%02u/%02u/%04u %02u:%02u:%02u"),
+            varmm = dt.Month(),
+            vardd = dt.Day(),
+            varyy = dt.Year(),
+            varHr = dt.Hour(),
+            varMin = dt.Minute(),
+            varSec = dt.Second() );
+    hours = dt.Hour();
+    hour_dig1 = (hours/10U)%10;
+    hour_dig2 = (hours/1U)%10;
+    delay(200);
+   }
+  }
+  if (timeSelect == 0){
+    
+  }
+}
+void setAlarm(){
+
+}
+
 #define countof(a) (sizeof(a) / sizeof(a[0]))
 
 void printDateTime(const RtcDateTime& dt)
