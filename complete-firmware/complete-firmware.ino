@@ -280,12 +280,47 @@ void declareTime(const RtcDateTime& dt){
 
       delay(200);
     }
-
+    if (downState == LOW){
+      Serial.println("minutes down button pressed");
+      varHr = dt.Hour();
+      varMin = dt.Minute();
+      varSec = dt.Second();
+      vardd = dt.Day();
+      varmm = dt.Month();
+      varyy = dt.Year();
+      varMin--;   //subtract one minute from the current time
+      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      Rtc.SetDateTime(dateTime);
+   }
+   if (upState == LOW){
+      Serial.println("minutes up button pressed");
+      varHr = dt.Hour();
+      varMin = dt.Minute();
+      varSec = dt.Second();
+      vardd = dt.Day();
+      varmm = dt.Month();
+      varyy = dt.Year();
+      varMin++;   //add one minute to the current time
+      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      Rtc.SetDateTime(dateTime);
+    }
   }
 }
 }
 void setAlarm(){
-
+  int lastState = alarmState;
+  int timeSelect;
+  alarmState = digitalRead(alarmButton);
+  if (alarmState == LOW && lastState == HIGH){
+    timeSelect = 1;
+  }
+  else {
+    timeSelect = 0;                           
+  }
+  if (timeSelect == 1){
+    
+  }
+  
 }
 
 #define countof(a) (sizeof(a) / sizeof(a[0]))
