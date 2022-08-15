@@ -30,6 +30,12 @@ int buttonPresses = 0;
 int buzzer = 2;
 
 //RTC variables
+int varMin = 0;
+int varHr = 0;
+int varSec = 0;
+int vardd = 0;
+int varmm = 0;
+int varyy = 0;
 int hours = 0;
 int Minutes = 0;
 int time_min = 0;
@@ -37,6 +43,14 @@ int time_hours = 0;
 
 int alarmMin;
 int alarmHr;
+
+//declare functions
+const RtcDateTime& checkRtc();
+void checkAlarm();
+void checkButtons(const RtcDateTime& dt);
+void declareTime(const RtcDateTime& dt);
+void setAlarm();
+void printDateTime(const RtcDateTime& dt);
 
 // for the 16x2 LCD
 #define rs A0 
@@ -130,12 +144,12 @@ void setup() {
 }
 
 void loop() {
-checkRtc();
+RtcDateTime now = checkRtc();
 checkAlarm();
-checkButtons();
+checkButtons(now);
 }
 
-void checkRtc()
+const RtcDateTime& checkRtc()
 {
   if (millis()-timeReference>=2000){
     if (!Rtc.IsDateTimeValid()) 
@@ -157,6 +171,7 @@ void checkRtc()
   Serial.println();
 
   delay(100);  
+  return now;
 }
 }
 //check if the alarm should be turned on
@@ -189,7 +204,7 @@ void checkAlarm()
   }
 }
 }
-void checkButtons(){
+void checkButtons(const RtcDateTime& dt){
   int clicks = 0;
   if (setState == LOW){
     int buttonRef = millis();
@@ -203,14 +218,14 @@ void checkButtons(){
     }
   }
   if (clicks == 0){
-    declareTime();
+    declareTime(now);
   }
   else if (clicks == 1){
     setAlarm();
   }
 }
 
-void declareTime(){
+void declareTime(const RtcDateTime& dt){
   int lastState = alarmState;
   int timeSelect;
   alarmState = digitalRead(alarmButton);
@@ -223,28 +238,51 @@ void declareTime(){
   //blink 7-seg display 
   if (timeSelect == 1){
    while ((upState == HIGH) && (downState == HIGH)){
-      clearDisplay(0);
+      lc.clearDisplay(0);
       delay(100);
 
-    //print 7-seg time
-        snprintf_P(datestring, 
-            countof(datestring),
-            PSTR("%02u/%02u/%04u %02u:%02u:%02u"),
-            varmm = dt.Month(),
-            vardd = dt.Day(),
-            varyy = dt.Year(),
-            varHr = dt.Hour(),
-            varMin = dt.Minute(),
-            varSec = dt.Second() );
-    hours = dt.Hour();
-    hour_dig1 = (hours/10U)%10;
-    hour_dig2 = (hours/1U)%10;
+    //print time--double check
+    printDateTime(now);
+    
     delay(200);
    }
-  }
+   if (downState == LOW){
+      Serial.println("hour down button pressed");
+      varHr = dt.Hour();
+      varMin = dt.Minute();
+      varSec = dt.Second();
+      vardd = dt.Day();
+      varmm = dt.Month();
+      varyy = dt.Year();
+      varHr--;   //subtract one hour from the current time
+      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      Rtc.SetDateTime(dateTime);
+   }
+   if (upState == LOW){
+      Serial.println("hour up button pressed");
+      varHr = dt.Hour();
+      varMin = dt.Minute();
+      varSec = dt.Second();
+      vardd = dt.Day();
+      varmm = dt.Month();
+      varyy = dt.Year();
+      varHr++;   //add one hour to the current time
+      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      Rtc.SetDateTime(dateTime);
+    }
   if (timeSelect == 0){
-    
+    while((upState == HIGH) && (downState == HIGH)){
+      lcd.clear();
+      delay(100);
+
+      //print time--double check
+      printDateTime(now);
+
+      delay(200);
+    }
+
   }
+}
 }
 void setAlarm(){
 
@@ -255,7 +293,6 @@ void setAlarm(){
 void printDateTime(const RtcDateTime& dt)
 { 
     char datestring[20];
-    String meridiem = " am"; 
     snprintf_P(datestring, 
             countof(datestring),
             PSTR("%02u/%02u/%04u %02u:%02u:%02u"),
