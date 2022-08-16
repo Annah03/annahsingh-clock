@@ -51,6 +51,7 @@ void checkButtons(const RtcDateTime& dt);
 void declareTime(const RtcDateTime& dt);
 void setAlarm();
 void printDateTime(const RtcDateTime& dt);
+void printAlarmTime(int alarmHr_dig1, int alarmHr_dig2, int alarmMin_dig1, int alarmMin_dig2);
 
 // for the 16x2 LCD
 #define rs A0 
@@ -306,23 +307,87 @@ void declareTime(const RtcDateTime& dt){
     }
   }
 }
+  if (setState == LOW){
+    loop();
+  }
 }
 void setAlarm(){
   int lastState = alarmState;
   int timeSelect;
+  int alarmHr_dig1;
+  int alarmHr_dig2;
+  int alarmMin_dig1;
+  int alarmMin_dig2;
+  
+  //set preliminary alarm time
+  alarmHr = 12;
+  alarmMin = 59;
+  
   alarmState = digitalRead(alarmButton);
+  //timeSelect to control hours/mins
   if (alarmState == LOW && lastState == HIGH){
     timeSelect = 1;
   }
   else {
     timeSelect = 0;                           
   }
+  //timeSelect == 1 controls hours
   if (timeSelect == 1){
-    
+    while((upState == HIGH) && (downState == HIGH)){
+      lc.clearDisplay(0);
+      delay(100);
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    } 
+    if (downState == LOW){
+      alarmHr--;
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    }
+    if (upState == LOW){
+      alarmHr++;
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    }
   }
-  
+  if (timeSelect == 0){
+    while((upState == HIGH) && (downState == HIGH)){
+      //blink lcd time
+      lcd.clear();
+      delay(100);
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    }
+    if (downState == LOW){
+      alarmMin --;
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    }
+    if (upState == LOW){
+      alarmMin++;
+      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+    }
+  }
+  if (setState == LOW){
+    loop();
+  }
 }
+void printAlarmTime(int alarmHr_dig1, int alarmHr_dig2, int alarmMin_dig1, int alarmMin_dig2){
+      //break time into digits
+      alarmHr_dig1 = (alarmHr/10U)%10;
+      alarmHr_dig2 = (alarmHr/1U)%10;
+      alarmMin_dig1 = (alarmMin/10U)%10;
+      alarmMin_dig2 = (alarmMin/1U)%10;
 
+      //print on 7-seg
+      lc.setDigit(0,0,alarmHr_dig1,false);
+      lc.setDigit(0,1,alarmHr_dig2,false);
+
+      //print on lcd 
+      lcd.setCursor(5,0);
+      for (int i = 1; i <= alarmMin_dig1; i++){
+        lcd.print(char(255)); 
+      }
+      lcd.setCursor(4,1); 
+      for (int i = 1; i <= alarmMin_dig2; i++){
+        lcd.print(char(255)); 
+      }
+}
 #define countof(a) (sizeof(a) / sizeof(a[0]))
 
 void printDateTime(const RtcDateTime& dt)
