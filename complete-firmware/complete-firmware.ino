@@ -43,7 +43,11 @@ int time_hours = 0;
 
 int alarmMin;
 int alarmHr;
-
+int alarmHr_dig1;
+int alarmHr_dig2;
+int alarmMin_dig1;
+int alarmMin_dig2;
+  
 //declare functions
 const RtcDateTime& checkRtc();
 void checkAlarm();
@@ -51,7 +55,7 @@ void checkButtons(const RtcDateTime& dt);
 void declareTime(const RtcDateTime& dt);
 void setAlarm();
 void printDateTime(const RtcDateTime& dt);
-void printAlarmTime(int alarmHr_dig1, int alarmHr_dig2, int alarmMin_dig1, int alarmMin_dig2);
+void printAlarmTime();
 
 // for the 16x2 LCD
 #define rs A0 
@@ -80,7 +84,7 @@ void setup() {
     downState == digitalRead(downButton);
     upState == digitalRead(upButton);
     setState == digitalRead(setButton);
-    alarmState == digitalRead(setButton);
+    alarmState == digitalRead(alarmButton);
 
     //setup lcd
     lcd.begin(16, 2);
@@ -99,6 +103,7 @@ void setup() {
 
     Rtc.Begin(); 
     delay(100);
+
         
     RtcDateTime compiled = RtcDateTime(__DATE__, __TIME__);
     printDateTime(compiled);
@@ -146,6 +151,7 @@ void setup() {
 
 void loop() {
 RtcDateTime now = checkRtc();
+Serial.print("test rtc");
 checkAlarm();
 checkButtons(now);
 }
@@ -207,17 +213,19 @@ void checkAlarm()
 }
 void checkButtons(const RtcDateTime& dt){
   int clicks = 0;
+  int clickState = 1;
+  
   //determine amount of set button clicks within time frame
   if (setState == LOW){
     int buttonRef = millis();
     while(millis()-buttonRef<2000){
-      if (setState == LOW){
-         clicks = 1;
+      if (setState == LOW && clickState == HIGH){
+         clicks = !clicks;
+         clickState = LOW;
       }
-      else if (setState == HIGH){
-        clicks = 0;
+      else if (setState == HIGH && clickState == LOW){
+        clickState = HIGH;
       }
-    }
   }
   //set time if clicks == 0
   if (clicks == 0){
@@ -228,18 +236,22 @@ void checkButtons(const RtcDateTime& dt){
     setAlarm();
   }
 }
-
+}
 void declareTime(const RtcDateTime& dt){
+  int lastState = 1;
+  int up_state = 1; 
+  int down_state = 1;
+  
   while (setState == HIGH){
   //toggle timeSelect to change hrs/minutes
-    int lastState = alarmState;
     int timeSelect;
     alarmState = digitalRead(alarmButton);
     if (alarmState == LOW && lastState == HIGH){
-      timeSelect = 1;
+      timeSelect = !timeSelect;
+      lastState = LOW;
     }
-    else {
-      timeSelect = 0;                           
+    else if (alarmState == HIGH && lastState == LOW){ 
+      lastState = HIGH;                          
     }
     //blink 7-seg display 
     //timeSelect == 1, so hours are changing
@@ -257,8 +269,9 @@ void declareTime(const RtcDateTime& dt){
       return;
      }
      //decrease hour by one if down button is pressed
-     if (downState == LOW){
+     if (downState == LOW && down_state == HIGH){
         Serial.println("hour down button pressed");
+        down_state = LOW;
         varHr = dt.Hour();
         varMin = dt.Minute();
         varSec = dt.Second();
@@ -266,12 +279,14 @@ void declareTime(const RtcDateTime& dt){
         varmm = dt.Month();
         varyy = dt.Year();
         varHr--;   //subtract one hour from the current time
-        RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
-        Rtc.SetDateTime(dateTime);
+     }
+     else if (downState == HIGH && down_state == LOW){
+      down_state = HIGH;
      }
      //increase hour by one if up button is pressed
-     if (upState == LOW){
+     if (upState == LOW && up_state == HIGH){
         Serial.println("hour up button pressed");
+        up_state = LOW;
         varHr = dt.Hour();
         varMin = dt.Minute();
         varSec = dt.Second();
@@ -279,9 +294,10 @@ void declareTime(const RtcDateTime& dt){
         varmm = dt.Month();
         varyy = dt.Year();
         varHr++;   //add one hour to the current time
-        RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
-        Rtc.SetDateTime(dateTime);
       }
+     else if (upState == HIGH && up_state == LOW){
+      up_state = HIGH;
+     }
     //blink lcd 
     //timeSelect == 0, so minutes are changing
     if (timeSelect == 0){
@@ -299,8 +315,9 @@ void declareTime(const RtcDateTime& dt){
       return;
      }
       //decrease minutes by one
-      if (downState == LOW){
+     if (downState == LOW && down_state == HIGH){
         Serial.println("minutes down button pressed");
+        down_state = LOW;
         varHr = dt.Hour();
         varMin = dt.Minute();
         varSec = dt.Second();
@@ -308,12 +325,14 @@ void declareTime(const RtcDateTime& dt){
         varmm = dt.Month();
         varyy = dt.Year();
         varMin--;   //subtract one minute from the current time
-        RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
-        Rtc.SetDateTime(dateTime);
+     }
+     else if (downState == HIGH && down_state == LOW){
+      down_state = HIGH;
      }
      //increase minutes by 1
-     if (upState == LOW){
+     if (upState == LOW && up_state == HIGH){
         Serial.println("minutes up button pressed");
+        up_state = LOW;
         varHr = dt.Hour();
         varMin = dt.Minute();
         varSec = dt.Second();
@@ -321,54 +340,64 @@ void declareTime(const RtcDateTime& dt){
         varmm = dt.Month();
         varyy = dt.Year();
         varMin++;   //add one minute to the current time
-        RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
-        Rtc.SetDateTime(dateTime);
       }
+     else if (upState == HIGH && up_state == LOW){
+      up_state = HIGH;
+     }
   }
 }
 }
+      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      Rtc.SetDateTime(dateTime);
 }
 void setAlarm(){
+  int lastState = 1;
+  int down_state = 1;
+  int up_state = 1;
+  
   while (setState == HIGH){
-  int lastState = alarmState;
-  int timeSelect;
-  int alarmHr_dig1;
-  int alarmHr_dig2;
-  int alarmMin_dig1;
-  int alarmMin_dig2;
   
   //set preliminary alarm time
   alarmHr = 12;
   alarmMin = 59;
   
+  int timeSelect;
   alarmState = digitalRead(alarmButton);
   
-  //timeSelect to control hours/mins
   if (alarmState == LOW && lastState == HIGH){
-    timeSelect = 1;
+    timeSelect = !timeSelect;
+    lastState = LOW;
   }
-  else {
-    timeSelect = 0;                           
-  }
+  else if (alarmState == HIGH && lastState == LOW){ 
+    lastState = HIGH;                    
+}
   //timeSelect == 1 controls hours
   if (timeSelect == 1){
     while((upState == HIGH) && (downState == HIGH) && (setState == HIGH)){
       lc.clearDisplay(0);
       delay(100);
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
     }
      if (setState == LOW){
       return;
      }
     //decrease alarm hrs by 1
-    if (downState == LOW){
+    if (downState == LOW && down_state == HIGH){
+      down_state = LOW;
       alarmHr--;
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
+    }
+    else if (downState == HIGH && down_state == LOW){
+      down_state = HIGH;
     }
     //increase alarm hrs by 1
-    if (upState == LOW){
+    if (upState == LOW && up_state == HIGH){
+      up_state = LOW;
       alarmHr++;
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
+    }
+    else if (upState == HIGH && up_state == LOW){
+      up_state == HIGH;
     }
   }
   //timeSelect == 0 controls minutes
@@ -377,25 +406,33 @@ void setAlarm(){
       //blink lcd time
       lcd.clear();
       delay(100);
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
     }
      if (setState == LOW){
       return;
      }
     //decrease alarm mins by 1
-    if (downState == LOW){
+    if (downState == LOW && down_state == HIGH){
+      down_state = LOW;
       alarmMin --;
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
+    }
+    else if (downState == HIGH && down_state == LOW){
+      down_state == HIGH;
     }
     //increase alarm mins by 1
-    if (upState == LOW){
+    if (upState == LOW && up_state == HIGH){
+      up_state = LOW;
       alarmMin++;
-      printAlarmTime(alarmHr_dig1, alarmHr_dig2, alarmMin_dig1, alarmMin_dig2);
+      printAlarmTime();
+    }
+    else if (upState == HIGH && up_state == LOW){
+      up_state = HIGH;
     }
   }
 }
 }
-void printAlarmTime(int alarmHr_dig1, int alarmHr_dig2, int alarmMin_dig1, int alarmMin_dig2){
+void printAlarmTime(){
       //break time into digits
       alarmHr_dig1 = (alarmHr/10U)%10;
       alarmHr_dig2 = (alarmHr/1U)%10;
