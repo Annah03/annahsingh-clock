@@ -4,7 +4,6 @@
 #include <LiquidCrystal.h>
 #include <Wire.h>
 #include <RtcDS1307.h>
-#include <DS1307RTC.h>
 RtcDS1307<TwoWire> Rtc(Wire);
 
 //initalize global variables
@@ -298,6 +297,7 @@ void declareTime(const RtcDateTime& dt){
      else if (upState == HIGH && up_state == LOW){
       up_state = HIGH;
      }
+    }
     //blink lcd 
     //timeSelect == 0, so minutes are changing
     if (timeSelect == 0){
@@ -310,7 +310,6 @@ void declareTime(const RtcDateTime& dt){
   
         delay(200);
       }
-
      if (setState == LOW){
       return;
      }
@@ -344,12 +343,12 @@ void declareTime(const RtcDateTime& dt){
      else if (upState == HIGH && up_state == LOW){
       up_state = HIGH;
      }
-  }
 }
 }
       RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
       Rtc.SetDateTime(dateTime);
 }
+
 void setAlarm(){
   int lastState = 1;
   int down_state = 1;
