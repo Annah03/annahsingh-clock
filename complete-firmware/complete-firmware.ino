@@ -71,6 +71,8 @@ void printAlarmTime();
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 LedControl lc=LedControl(11,13,10,1);
 
+RtcDateTime now;
+
 void setup() {
     // setup buttons and alarm
     pinMode(downButton, INPUT);
@@ -151,8 +153,8 @@ void setup() {
 void loop() {
 RtcDateTime now = checkRtc();
 Serial.print("test rtc");
-checkAlarm();
-checkButtons(now);
+ //checkAlarm();
+  checkButtons(now);
 }
 
 const RtcDateTime& checkRtc()
