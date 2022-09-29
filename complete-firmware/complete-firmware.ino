@@ -153,7 +153,7 @@ void setup() {
 void loop() {
 RtcDateTime now = checkRtc();
 Serial.print("test rtc");
- //checkAlarm();
+  checkAlarm();
   checkButtons(now);
 }
 
@@ -347,7 +347,9 @@ void declareTime(const RtcDateTime& dt){
      }
 }
 }
-      RtcDateTime dateTime(varyy, varmm, vardd, varHr, varMin, varSec);
+      RtcDateTime dateTime(varmm, vardd, varyy, varHr, varMin, varSec);
+      Serial.print("Setting RTC to :");
+      printDateTime(dateTime);
       Rtc.SetDateTime(dateTime);
 }
 
